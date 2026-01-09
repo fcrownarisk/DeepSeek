@@ -1,3 +1,4 @@
+
 #include "MeasureDisplay.h"
 #include <iomanip>
 #include <sstream>
@@ -14,9 +15,7 @@ MeasureDisplay::MeasureDisplay() {
     thickness = 2;
 }
 
-cv::Mat MeasureDisplay::displayMeasure(const cv::Mat& image, 
-                                               const std::vector<BlockMeasure>& blocks,
-                                               bool showValues) {
+cv::Mat MeasureDisplay::displayMeasure(const cv::Mat& image, const std::vector<BlockMeasure>& blocks, bool showValues) {
     cv::Mat displayImage = image.clone();
     
     // Draw each block with Measure
@@ -253,4 +252,5 @@ void MeasureDisplay::drawGrid(cv::Mat& image, int gridSize) {
     
     // Apply grid with transparency
     cv::addWeighted(image, 0.7, gridImage, 0.3, 0, image);
+
 }
