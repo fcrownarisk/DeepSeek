@@ -1,7 +1,7 @@
 #ifndef MEASUREMENTDISPLAY_H
 #define MEASUREMENTDISPLAY_H
 
-#include <opencv2/opencv.hpp"
+#include "opencv2/opencv.hpp"
 #include "BlockDetector.h"
 
 class MeasurementDisplay {
@@ -45,4 +45,5 @@ private:
     double fontScale;
     int thickness;
 };
+
 #endif // MEASUREMENTDISPLAY_H
