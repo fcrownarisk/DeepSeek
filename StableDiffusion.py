@@ -591,7 +591,7 @@ class StableCraftWindow(pyglet.window.Window):
         
         if hit_pos:
             x, y, z = hit_pos
-            s = 0.51
+            s = 0.52
             
             # Define cube edges
             vertices = [
@@ -668,4 +668,5 @@ def main():
     pyglet.app.run()
 
 if __name__ == '__main__':
+
     main()
