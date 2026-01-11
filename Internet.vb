@@ -10,7 +10,7 @@ Module InternetConnection
     ''' <param name="timeoutMs">Timeout in milliseconds (default=5000)</param>
     ''' <returns>ConnectionResult object with success status and details</returns>
     Sub Function TestInternetConnection(Optional method As Integer = 4, 
-                                          Optional timeoutMs As Integer = 5000) As ConnectionResult
+                                        Optional timeoutMs As Integer = 5000) As ConnectionResult
         
         Dim result As New ConnectionResult With {
             .Timestamp = DateTime.Now,
