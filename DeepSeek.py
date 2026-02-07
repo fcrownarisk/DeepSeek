@@ -10,7 +10,7 @@ SECTOR_n = 16
 BLOCK_n = 0.5
 
 # Block types with their texture coordinates (top, bottom, side)
-BLOCK_TYPES = {
+BLOCK = {
     'GRASS': ((1, 0), (1, 0), (1, 0)),
     'STONE': ((2, 1), (2, 1), (2, 1)),
     'BRICK': ((2, 0), (2, 0), (2, 0)),
@@ -31,7 +31,7 @@ FACE_VECTORS = [
 
 class Block:
     @staticmethod
-    def create_vertices(x, y, z, n=BLOCK_TYPES):
+    def create_vertices(x, y, z, n):
         """Generate cube vertices for a block"""
         return [
             x+n, y-n, z+n, x+n, y-n, z-n, x+n, y+n, z-n, x+n, y+n, z+n,  # Right
@@ -45,7 +45,7 @@ class Block:
     @staticmethod
     def get_texture_coords(block_type):
         """Get texture coordinates for a block type"""
-        top, bottom, side = BLOCK_TYPES.get(block_type, BLOCK_TYPES['STONE'])
+        top, bottom, side = BLOCK.get(block_type, BLOCK['STONE'])
         
         def tex_coord(x, y, n=4):
             """Convert texture grid coordinates to UV coordinates"""
@@ -412,4 +412,5 @@ def main():
     pyglet.app.run()
 
 if __name__ == '__main__':
+
     main()
