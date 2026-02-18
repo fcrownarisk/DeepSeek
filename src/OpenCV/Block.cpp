@@ -247,5 +247,4 @@ void Block::setPreprocessingParams(int blurSize, int cannyLow, int cannyHigh) {
 void Block::setMorphologyParams(int kernelSize, int iterations) {
     morphKernelSize = kernelSize;
     morphIterations = iterations;
-
 }
