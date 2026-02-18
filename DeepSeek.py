@@ -407,7 +407,7 @@ class GameWindow(pyglet.window.Window):
 
 def main():
     """Main entry point"""
-    window = GameWindow(width=1024, height=768, caption='Minecraft Clone', resizable=True)
+    window = GameWindow(width=2560, height=1440, caption='Minecraft Clone', resizable=True)
     pyglet.app.run()
 
 if __name__ == '__main__':
