@@ -29,6 +29,7 @@ FACE_VECTORS = [
     ( 0, 0,-1),  # Back
     ( 0,-1, 0),  # Bottom
     (-1, 0, 0),  # Left
+    ((1,1,1),(1,-1,1),(-1,1,-1)) #seven
 ]
 
 class Block:
@@ -42,6 +43,7 @@ class Block:
             x-n, y-n, z-n, x+n, y-n, z-n, x+n, y-n, z+n, x-n, y-n, z+n,  # Bottom
             x-n, y-n, z+n, x+n, y-n, z+n, x+n, y+n, z+n, x-n, y+n, z+n,  # Front
             x-n, y-n, z-n, x-n, y+n, z-n, x+n, y+n, z-n, x+n, y-n, z-n,  # Back
+            x+n, y+n, z+n, x+n, y+n, z-n, x-n, y-n, z+n, x-n, y-n, z-n,  # seven
         ]
     
     @staticmethod
@@ -487,3 +489,4 @@ def main():
     pyglet.app.run()
 if __name__ == '__main__':
     main()
+
