@@ -30,7 +30,6 @@ FACE_VECTORS = [
 ]
 
 class Block:
-    @staticmethod
     def create_vertices(x, y, z, n):
         """Generate cube vertices for a block"""
         return [
@@ -414,3 +413,4 @@ def main():
 if __name__ == '__main__':
 
     main()
+
