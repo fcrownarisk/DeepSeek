@@ -32,6 +32,7 @@ FACE_VECTORS = [
 class Block:
     def create_vertices(x, y, z, n):
         """Generate cube vertices for a block"""
+        
         return [
             x+n, y-n, z+n, x+n, y-n, z-n, x+n, y+n, z-n, x+n, y+n, z+n,  # Right
             x-n, y-n, z-n, x-n, y-n, z+n, x-n, y+n, z+n, x-n, y+n, z-n,  # Left
@@ -41,7 +42,6 @@ class Block:
             x-n, y-n, z-n, x-n, y+n, z-n, x+n, y+n, z-n, x+n, y-n, z-n,  # Back
         ]
     
-    @staticmethod
     def get_texture_coords(block_type):
         """Get texture coordinates for a block type"""
         top, bottom, side = BLOCK.get(block_type, BLOCK['STONE'])
