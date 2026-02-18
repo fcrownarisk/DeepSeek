@@ -466,7 +466,6 @@ class GameWindow(pyglet.window.Window):
         
         # Draw info (reuse existing label)
         self.info_label.draw()
-        
         # Draw position info
         pos_text = f"Position: {self.player.position[0]:.1f}, {self.player.position[1]:.1f}, {self.player.position[2]:.1f}"
         pos_label = pyglet.text.Label(
@@ -474,7 +473,6 @@ class GameWindow(pyglet.window.Window):
             x=10, y=self.height - 20, color=(255, 255, 255, 255)
         )
         pos_label.draw()
-        
         # Draw mode info
         mode = "FLYING" if self.player.flying else "WALKING"
         mode_label = pyglet.text.Label(
@@ -489,4 +487,3 @@ def main():
     pyglet.app.run()
 if __name__ == '__main__':
     main()
-
