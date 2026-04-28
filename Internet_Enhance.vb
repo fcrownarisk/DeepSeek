@@ -1,4 +1,4 @@
-' Enhanced DeepSeek Web Search System in VB.NET (376 lines)
+' Enhanced DeepSeek Web Search System in VB.NET (330 lines)
 Imports System.Net.Http
 Imports System.Net.Http.Headers
 Imports System.Text.Json
