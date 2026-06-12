@@ -71,7 +71,7 @@ class Model(object):
                 self.add_block((x, y - 3, z), STONE, immediate=False)
                 if x in (-n, n) or z in (-n, n):
                     for dy in range(-2, 3):
-                        self.add_block((x, y + dy, z), STONE, immediate=False)
+                        self.add_block((x, y + dy, z), SAND, BRICK, immediate=False)
 
         o = n - 10
         for _ in range(120):
