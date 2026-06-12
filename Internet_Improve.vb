@@ -25,7 +25,7 @@ Module DeepSeekImprovedSearch
 End Module
 
 ''' Represents a single web search result.
-Public Class SearchResult
+Class SearchResult
     Public Property Title As String
     Public Property Url As String
     Public Property Snippet As String
@@ -38,7 +38,7 @@ Public Interface ISearchProvider
 End Interface
 
 ''' Bing Web Search API provider with in-memory caching.
-Public Class BingSearchProvider
+Class BingSearchProvider
     Implements ISearchProvider
 
     Private Shared ReadOnly ApiKey As String = "YOUR_BING_API_KEY" ' Replace with your key
@@ -106,7 +106,7 @@ Public Class BingSearchProvider
 End Class
 
 ''' DuckDuckGo Instant Answer API provider (no key required).
-Public Class DuckDuckGoSearchProvider
+Class DuckDuckGoSearchProvider
     Implements ISearchProvider
     Private ReadOnly client As HttpClient
 
@@ -155,7 +155,7 @@ Public Class DuckDuckGoSearchProvider
 End Class
 
 ''' Factory to choose search provider based on configuration.
-Public Class SearchProviderFactory
+Class SearchProviderFactory
     Public Shared Function CreateProvider(providerName As String) As ISearchProvider
         Select Case providerName.ToLower()
             Case "bing"
@@ -169,7 +169,7 @@ Public Class SearchProviderFactory
 End Class
 
 ''' Core assistant that uses DeepSeek and web search when needed.
-Public Class DeepSeekAssistant
+Class DeepSeekAssistant
     Private ReadOnly searchProvider As ISearchProvider
     Private ReadOnly deepSeekClient As DeepSeekApiClient
 
@@ -219,7 +219,7 @@ Public Class DeepSeekAssistant
 End Class
 
 ''' Client for DeepSeek API (mock implementation).
-Public Class DeepSeekApiClient
+Class DeepSeekApiClient
     Private Shared ReadOnly ApiKey As String = "YOUR_DEEPSEEK_API_KEY"
     Private ReadOnly client As HttpClient
 
@@ -244,7 +244,7 @@ Public Class DeepSeekApiClient
 End Class
 
 ''' Simple cache cleaner that removes expired entries periodically.
-Public Class SearchCacheManager
+Class SearchCacheManager
     Private Shared timer As System.Timers.Timer
     Private Shared cache As ConcurrentDictionary(Of String, (Results As List(Of SearchResult), Timestamp As DateTime))
     Private Shared ReadOnly expiration As TimeSpan = TimeSpan.FromMinutes(10)
@@ -267,7 +267,7 @@ Public Class SearchCacheManager
 End Class
 
 ''' Helper for colored console output.
-Public Class ConsoleHelper
+Class ConsoleHelper
     Public Shared Sub WriteLineColored(message As String, color As ConsoleColor)
         Console.ForegroundColor = color
         Console.WriteLine(message)
